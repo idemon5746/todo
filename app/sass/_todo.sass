@@ -1,0 +1,70 @@
+$border-radius: 10px
+
+.todo
+	$this: &
+
+	&__container
+		padding: 50px 0
+
+	&__form
+		display: flex
+		margin-bottom: 15px
+
+	&__input
+		border-radius: $border-radius 0 0 $border-radius
+		border: 1px solid #198754
+		border-right: 0
+		padding-left: 15px
+		padding-right: 15px
+
+		+ #{$this}__btn
+			border-radius: 0 $border-radius $border-radius 0
+
+	&__list
+		> *
+			&:not(:last-child)
+				margin-bottom: 15px
+
+.todo-item
+	border-radius: 5px
+	display: flex
+	justify-content: space-between
+	transition: .5s
+	padding: 10px
+
+	&:hover
+		box-shadow: 0 0 10px rgba(0, 0, 0, .5)
+
+	&__checkbox
+		display: flex
+		align-items: center
+		cursor: pointer
+		width: 100%
+
+		input
+			display: none
+
+			&:checked
+				+ span
+					color: #198754
+
+					&:before
+						content: '\2714'
+						border-color: #198754
+
+	&__title
+		position: relative
+		cursor: pointer
+		font-size: 16px
+		padding-left: 25px
+
+		&:before
+			+size(20px)
+			content: ''
+			position: absolute
+			top: 50%
+			left: 0
+			transform: translateY(-50%)
+			border: 1px solid #000
+			text-align: center
+			line-height: 20px

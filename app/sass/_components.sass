@@ -1,0 +1,14 @@
+.flex
+	display: flex
+	flex-wrap: wrap
+
+$justify-content: (center, space-between, space-around, flex-start, flex-end)
+$align-items: (center, baseline, flex-start, flex-end)
+
+$row-align: (justify-content: $justify-content, align-items: $align-items)
+@each $name, $value in $row-align
+	@each $value-name in $value
+		.#{$name}-#{$value-name}
+			#{$name}: #{$value-name}
+			display: flex
+			flex-wrap: wrap

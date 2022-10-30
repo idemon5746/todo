@@ -1,0 +1,8 @@
+.idea/
+node_modules/
+app/css/*.css
+app/js/*.min.js
+app/*.html
+dist/**/*
+package-lock.json
+debug.log

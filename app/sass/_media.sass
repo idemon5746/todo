@@ -1,0 +1,22 @@
+@media (max-width: 991px)
+	.menu-container
+		.show-menu
+			display: block
+		.menu
+			flex-direction: column
+			position: absolute
+			top: 100%
+			left: 0
+			width: 100%
+			display: none
+			&-item
+				&-has-children
+					.sub-menu
+						margin-top: 10px
+						li
+							padding-left: 10px
+					.menu-item-has-children
+						&:hover
+							&:before
+								border-color: #000
+								transform: rotateZ(135deg)

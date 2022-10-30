@@ -1,0 +1,12 @@
+extends templates/base
+
+block variables
+  - var bodyClass = 'main'
+
+block title
+  |index
+block body
+  .container
+    .row.justify-content-center
+      .col-md-5
+        +todo('todo')
